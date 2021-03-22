@@ -68,6 +68,11 @@
                         name: comment.name.trim() === '' ? "Anônimo" : comment.name
                     }))
                 }
+            },
+            watch: {
+                comments(value) {
+                    console.log(`Value: ${JSON.stringify(value)}`);
+                }
             }
         })
     </script>
