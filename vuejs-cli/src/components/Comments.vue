@@ -3,8 +3,10 @@
         <h1>Comentários</h1>
         <hr/>
         <FormTodo v-on:add-todo="addComment"></FormTodo>
+        <hr/>
+        <p v-if="comments.length <= 0">Sem comentários</p>
         <div class="list-group">
-            <div class="list-group-item" v-for="(comment, index) in allComments" :key="comment">
+            <div class="list-group-item" v-for="(comment, index) in allComments" :key="index">
                 <span class="comment__author">Autor: <strong>{{ comment.name }}</strong></span>
                 <p>{{ comment.message }}</p>
                 <div>
